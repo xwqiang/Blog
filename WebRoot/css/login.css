@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body{ background:#FFF; text-align:center;}
+
+#container{ background:#4F99BE url(../images/login/login-bg-01.gif) no-repeat 50% 50%; height:450px; text-align:left; position:relative;}
+.container{ width:980px; margin:0 auto; height:450px;/* background:url(../images/login/login-cont-bg.gif) no-repeat left top;*/ overflow:hidden;}
+.login-box{ margin:20px 0 0 590px; background:url(../images/login/login.png) no-repeat left top; width:358px; height:450px; overflow:hidden;}
+.login-box form{ margin:96px 45px 0 50px;}
+.login-item{
+	margin-bottom:10px;
+	border:1px solid #B8B8B8;
+	width:248px;
+	height:38px;
+	line-height:38px;
+	*zoom:1;
+}
+.login-item:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.login-item label{
+	float:left;
+	padding-left:20px;
+	width:48px;
+	height:38px;
+	font:normal 14px/40px "微软雅黑";
+	color:#666;
+	}
+.login-item input{
+	float:left;
+	width:165px;
+	height:38px; line-height:38px;
+	
+	}
+.login-item-code{ width:160px; float:left; margin-bottom:0;}
+input.ipt-code{ width:87px;}
+.code-pic{
+	float:right;
+	width:90px;
+	height:38px;
+}
+
+.login-item-p{ text-align:right; padding-right:12px; height:16px;color:#666; font-family:"微软雅黑";}
+.login-item-p a{ color:#666; font-family:"微软雅黑";}
+.login-btn{ margin-top:30px;}
+.login-btn input{ width:102px; height:35px; font-size:14px; font-weight:bold; cursor:pointer;}
+input.ipt-submit{ background:url(../images/login/login-btn-submit.gif) no-repeat left top; color:#FFF;}
+input.ipt-reset{ background:url(../images/login/login-btn-reset.gif) no-repeat left top; color:#666; margin-left:40px;}
+.login-foot{ margin:20px 0; color:#666;}

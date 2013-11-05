@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 清除内外边距 */
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, select, /* form elements 表单元素 */
+table, th, td,
+div, img{ /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+	border:0;
+}
+
+/* 设置默认字体 */
+body{ /* for ie */
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+	overflow:hidden;
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+input[type="text"]
+{-webkit-appearance:none}
+input[type="button"], input[type="reset"], input[type="submit"]
+{font-size: 12px; padding:0 6px; height:24px; position: relative; color:#444;vertical-align:middle;}
+
+/* 重置表格元素 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clear{ clear:both;}
+.left{ float:left;}
+.right{ float:right;}
+/* 全局布局layout */
+  /* 右侧 side_box */
+#side_box{ width:200px; background:#F9F9F9; overflow:hidden;}
+.side_box{ margin-left:10px; width:190px;}
+.user_info{ margin-top:30px; border-bottom:1px solid #CCC; color:#666;}
+.user_head{float: left; width:82px;}
+.user_head img{	
+	width: 80px;
+	height: 80px;
+	border:1px solid #fff;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+　　 border-radius: 6px;
+	position:relative;
+	z-index:2;
+	-moz-box-shadow: 2px 2px 1px #aaa; 
+	-webkit-box-shadow: 2px 2px 1px #aaa; 
+	box-shadow: 2px 2px 1px #aaa;
+	behavior: url(ie-css3.htc);
+}
+
+.user_name{ float:left}
+.user_name p{ margin:10px 0 0 10px; font-size:14px; font-weight:bold;}
+.user_name p a{ color:#666;}
+.user_name p a:hover{ text-decoration:none;}
+.user_opt{ margin:18px 0 10px;}
+.user_opt a{ color:#666;}
+
+#user_nav{ margin:15px 0;}
+#user_nav ul{ margin-left:5px;}
+#user_nav ul li{ margin:10px 0;}
+#user_nav li a{ color:#4985D4; font-weight:bold;}

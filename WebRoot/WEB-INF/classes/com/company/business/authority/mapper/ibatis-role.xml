@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="roleManager">
+	<typeAlias alias="role"
+		type="com.company.business.authority.model.Role" />
+	<typeAlias alias="module"
+		type="com.company.business.authority.model.Module" />
+  
+	<select id="getRoleList" parameterClass="role" resultClass="role">
+		select * from role 
+	</select> 
+	<select id="getModuleList" parameterClass="int" resultClass="module">
+		select * from module
+	</select>
+</sqlMap>

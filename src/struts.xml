@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="dhtml" />
+	<!-- 30M -->
+	<constant name="struts.multipart.maxSize" value="31457280"/>
+	<package name="hskj" extends="struts-default">
+		<interceptors>
+			<interceptor name="authority"
+				class="com.hskj.business.core.AuthorityInterceptor" />
+			<interceptor-stack name="hskjdefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="hskjdefault"></default-interceptor-ref>
+		<global-results>
+			<!-- 登陆失败后转向页面 -->
+			<result name="outsys" type="redirect">/index.jsp</result>
+			<!-- 出错页面 -->
+			<result name="error">/error/403.html</result>
+			<!-- 成功页面 -->
+			<result name="success">/plateForm/login.jsp</result>
+		</global-results>
+
+	</package>
+	<package name="sso" extends="struts-default">
+		<interceptors>
+			<interceptor name="sso_authority" class="com.hskj.business.core.InterfaceInterceptor" />
+			<interceptor-stack name="ssodefault">
+				<interceptor-ref name="defaultStack" />
+				  <interceptor-ref name="sso_authority" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="ssodefault"></default-interceptor-ref>
+	</package>
+	
+	
+	
+	
+	
+	
+	<package name="default" extends="struts-default">
+		<default-action-ref name="notFound" />
+		<action name="notFound">
+			<result>/error/404.jsp</result>
+		</action>
+	</package>
+</struts>
